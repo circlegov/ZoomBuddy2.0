@@ -48,6 +48,8 @@ Download the latest version of ZoomBuddy from the [Releases page](https://github
 
 A file `EXAMPLE_ZoomData.csv` is provided. Rename this to `ZoomData.csv` in the same folder as `ZoomBuddy.exe` with your meeting ID's and passwords. Time is in 24hr format with a `:` between the hour and minute (e.g. `6:45PM` would be `18:45`).
 
+Add it as a task to Task Scheduler. Create Task -> Check "Run with highest privileges" -> Triggers -> New -> Begin the task: At log on -> Actions -> New -> Select the exe of zoom buddy and start in the directory the exe is in
+
 ## Usage
 
 Run the executable `ZoomBuddy.exe` (or the `.py`) and it will search for `ZoomData.csv`. If a Zoom call is happening within ±15mins, ZoomBuddy will automatically join that call. If it cannot detect a meeting, a window will open asking which meeting (in `ZoomData.csv`) to join
