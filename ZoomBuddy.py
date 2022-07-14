@@ -12,10 +12,9 @@ Update_URL = 'https://github.com/MNThomson/ZoomBuddy/releases/latest'
 def main():
 	figlet()
 	update()
-	if len(sys.argv) == 1:
-		auto()
-	else:
-		manual()
+        while(True):    
+            auto()
+            sleep(5)
 
 def figlet():
 	#Figlet for ZoomBuddy
@@ -99,7 +98,7 @@ def auto():
 	for row in csvfile:
 		try:
 			classtime = int(row[day+4].split(":")[0]) * 60 + int(row[day+4].split(":")[1])
-			if (time>classtime-15) and (time<classtime+15):
+			if (time>classtime-5) and (time<classtime+15):
 				meetingID=row[2]
 				#Check if password exists
 				try:
@@ -110,7 +109,6 @@ def auto():
 		except ValueError:
 			pass
 	print("No meetinges found for this time!")
-	manual()
 
 #Show a popup to choose which meeting to join
 def manual():
