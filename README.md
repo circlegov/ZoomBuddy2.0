@@ -52,7 +52,7 @@ Add it as a task to Task Scheduler. Create Task -> Check "Run with highest privi
 
 ## Usage
 
-Run the executable `ZoomBuddy.exe` (or the `.py`) and it will search for `ZoomData.csv`. If a Zoom call is happening within Â±15mins, ZoomBuddy will automatically join that call. If it cannot detect a meeting, a window will open asking which meeting (in `ZoomData.csv`) to join
+Run the executable `ZoomBuddy.exe` (or the `.py`) and it will search for `ZoomData.csv`. If a Zoom call is happening within Â-5mins + 15mins, ZoomBuddy will automatically join that call. If it cannot detect a meeting, a window will open asking which meeting (in `ZoomData.csv`) to join
 
 If any cli argument is given, it will launch into the selection mode and bypass checking which meeting to join
 
